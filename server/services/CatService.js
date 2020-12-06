@@ -3,8 +3,7 @@ import { BadRequest } from "../utils/Errors";
 
 class CatsService {
   async find(query = {}) {
-    let cats = await dbContext.Cats.find(query);
-    return cats;
+    return await dbContext.Cats.find(query);
   }
   async create(rawData) {
     return await dbContext.Cats.create(rawData);

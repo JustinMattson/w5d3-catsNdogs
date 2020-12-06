@@ -7,7 +7,9 @@ export class CatsController extends BaseController {
     super("api/cats");
     this.router
       .get("", this.getAll)
+      // .get("/:id", this.getById) // not yet written
       .post("", this.create)
+      // .put("/:id", this.edit) // not yet written
       .delete("/:id", this.delete);
   }
   async getAll(_, res, next) {
